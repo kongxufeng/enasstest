@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="评估诊断">
+	<listeners>
+		<listener class-name="com.enass.utils.TestListener" />
+		<listener class-name="com.enass.utils.RetryListener" />
+	</listeners>
+	<parameter name="test" value="test1"></parameter>
+	<test name="开始评估">
+		<classes>
+			<class name="com.enass.test.assessment.Start" />
+		</classes>
+	</test>
+</suite>
