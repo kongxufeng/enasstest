@@ -15,8 +15,8 @@ import org.testng.annotations.Test;
 
 public class Start extends BaseTest {
 
-	@Test(dataProvider = "auth", dataProviderClass = UserData.class)
-	public void zhenduan(String username, String password) throws Exception {
+	@Test(dataProvider = "pingguzhenduan", dataProviderClass = UserData.class)
+	public void zhenduan(String username, String password, String flag, String expect) throws Exception {
 		//driver.get("http://39.98.238.23/#/serviceHome");// 打开指定的网站
 
 		//登录
@@ -29,30 +29,30 @@ public class Start extends BaseTest {
 		Thread.sleep(1000);
 
 		//判断预期成熟度等级
-		String flag ="3" ;
+		//String flag ="3" ;
 		String a = "nth-child(1)";//选择第一项
 		String b = "last-child";//选择最后一项
-		String c = "贵公司已达到智能化一级成熟度";//预期评估结论
+		//String c = "贵公司已达到智能化一级成熟度";//预期评估结论
 		switch(flag){//成熟度等级
 		case "1"://1级
 			a = "nth-child(1)";
 			b = "last-child";
-			c = "贵公司已达到智能化一级成熟度，企业利用信息化技术进行业务数据的管理，部分核心业务具有一定信息化基础，部分设备的加工数据仍然通过手动传输，并未完全实现信息流与工作环节的关联。";
+			//c = "贵公司已达到智能化一级成熟度，企业利用信息化技术进行业务数据的管理，部分核心业务具有一定信息化基础，部分设备的加工数据仍然通过手动传输，并未完全实现信息流与工作环节的关联。";
 			break;
 		case "2"://2级
 			a = "nth-child(2)";
 			b = "last-child";
-			c = "贵公司已达到智能化二级成熟度，利用管理系统进行各项业务的开展和管理，操作技术（OT）系统的各部分实现了连通性和互操作性，但是依旧未能达到IT层面和OT层面的完全整合。";
+			//c = "贵公司已达到智能化二级成熟度，利用管理系统进行各项业务的开展和管理，操作技术（OT）系统的各部分实现了连通性和互操作性，但是依旧未能达到IT层面和OT层面的完全整合。";
 			break;
 		case "3"://3级
 			a = "last-child";
 			b = "last-child";
-			c ="贵公司已达到智能化三级成熟度，企业核心业务间实现了集成，数据在企业范围内实现共享；基于传感器捕捉大量数据节点，实现工厂的最新数字模型，也就是“数字孪生”，并且以构建数字孪生为核心元素，使用工程知识对采集的数据进行分析并形成认识，挖掘事件发生原因。";
+			//c ="贵公司已达到智能化三级成熟度，企业核心业务间实现了集成，数据在企业范围内实现共享；基于传感器捕捉大量数据节点，实现工厂的最新数字模型，也就是“数字孪生”，并且以构建数字孪生为核心元素，使用工程知识对采集的数据进行分析并形成认识，挖掘事件发生原因。";
 			break;
 		case "4"://4级
 			a = "last-child";
 			b = "nth-child(1)";
-			c = "贵公司已达到智能化四级成熟度，达到预测能力阶段，进而实现持续适应能力。企业可以模拟不同的未来情景，并评估它们发生的可能性，确定最具可能性的情景。基于预测能力，实现持续的适应性，使企业能够向IT系统下放适当决策，以便IT系统尽快适应变化多端的经营环境。";
+			//c = "贵公司已达到智能化四级成熟度，达到预测能力阶段，进而实现持续适应能力。企业可以模拟不同的未来情景，并评估它们发生的可能性，确定最具可能性的情景。基于预测能力，实现持续的适应性，使企业能够向IT系统下放适当决策，以便IT系统尽快适应变化多端的经营环境。";
 			break;
 		
 		}
@@ -154,7 +154,7 @@ public class Start extends BaseTest {
 		Thread.sleep(2000);
 		String actual = driver.findElement(By.cssSelector("div.assessR:nth-child(2) > p:nth-child(2)")).getText();
 
-		assertEquals(actual,c);
+		assertEquals(actual,expect);
 
 	}
 
