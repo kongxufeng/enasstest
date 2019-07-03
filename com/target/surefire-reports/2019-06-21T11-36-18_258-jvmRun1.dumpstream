@@ -1,0 +1,149 @@
+# Created at 2019-06-21T11:37:45.161
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Unknown Source)
+
+
+# Created at 2019-06-21T11:37:53.844
+Unexpected IOException with stream: 11:37:53.843 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过css selector方法查找ul[class~='el-menu-demo'] > li:last-child元素，已找到
+
+
+# Created at 2019-06-21T11:37:56.800
+Unexpected IOException with stream: 11:37:56.798 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找li0元素，已找到
+
+
+# Created at 2019-06-21T11:37:56.885
+Unexpected IOException with stream: 11:37:56.883 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找shortAccount元素，已找到
+
+
+# Created at 2019-06-21T11:37:56.995
+Unexpected IOException with stream: 11:37:56.994 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找password元素，已找到
+
+
+# Created at 2019-06-21T11:37:57.091
+Unexpected IOException with stream: 11:37:57.090 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找imgcode元素，已找到
+
+
+# Created at 2019-06-21T11:37:57.856
+Unexpected IOException with stream: 11:37:57.855 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找code0元素，已找到
+
+
+# Created at 2019-06-21T11:37:57.941
+Unexpected IOException with stream: 11:37:57.940 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过css selector方法查找input[value='登 录']元素，已找到
+
+
+# Created at 2019-06-21T11:37:58.395
+Unexpected IOException with stream: 11:37:58.394 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过class name方法查找errormessage元素，已找到
+
+
+# Created at 2019-06-21T11:37:58.455
+Unexpected IOException with stream: 11:37:58.454 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找li0元素，已找到
+
+
+# Created at 2019-06-21T11:37:58.520
+Unexpected IOException with stream: 11:37:58.519 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找shortAccount元素，已找到
+
+
+# Created at 2019-06-21T11:37:58.620
+Unexpected IOException with stream: 11:37:58.619 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找password元素，已找到
+
+
+# Created at 2019-06-21T11:37:58.712
+Unexpected IOException with stream: 11:37:58.711 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找imgcode元素，已找到
+
+
+# Created at 2019-06-21T11:37:59.382
+Unexpected IOException with stream: 11:37:59.381 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找code0元素，已找到
+
+
+# Created at 2019-06-21T11:37:59.468
+Unexpected IOException with stream: 11:37:59.468 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过css selector方法查找input[value='登 录']元素，已找到
+
+
+# Created at 2019-06-21T11:37:59.721
+Unexpected IOException with stream: 11:37:59.720 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过class name方法查找errormessage元素，已找到
+
+
+# Created at 2019-06-21T11:37:59.795
+Unexpected IOException with stream: 11:37:59.794 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找li0元素，已找到
+
+
+# Created at 2019-06-21T11:37:59.862
+Unexpected IOException with stream: 11:37:59.861 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找shortAccount元素，已找到
+
+
+# Created at 2019-06-21T11:37:59.967
+Unexpected IOException with stream: 11:37:59.966 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找password元素，已找到
+
+
+# Created at 2019-06-21T11:38:00.061
+Unexpected IOException with stream: 11:38:00.060 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找imgcode元素，已找到
+
+
+# Created at 2019-06-21T11:38:00.718
+Unexpected IOException with stream: 11:38:00.717 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找code0元素，已找到
+
+
+# Created at 2019-06-21T11:38:00.798
+Unexpected IOException with stream: 11:38:00.797 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过css selector方法查找input[value='登 录']元素，已找到
+
+
+# Created at 2019-06-21T11:38:01.087
+Unexpected IOException with stream: 11:38:01.086 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过class name方法查找errormessage元素，已找到
+
+
+# Created at 2019-06-21T11:38:01.155
+Unexpected IOException with stream: 11:38:01.154 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找li0元素，已找到
+
+
+# Created at 2019-06-21T11:38:01.228
+Unexpected IOException with stream: 11:38:01.227 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找shortAccount元素，已找到
+
+
+# Created at 2019-06-21T11:38:01.352
+Unexpected IOException with stream: 11:38:01.351 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找password元素，已找到
+
+
+# Created at 2019-06-21T11:38:01.460
+Unexpected IOException with stream: 11:38:01.457 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找imgcode元素，已找到
+
+
+# Created at 2019-06-21T11:38:02.396
+Unexpected IOException with stream: 11:38:02.395 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找code0元素，已找到
+
+
+# Created at 2019-06-21T11:38:02.481
+Unexpected IOException with stream: 11:38:02.480 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过css selector方法查找input[value='登 录']元素，已找到
+
+
+# Created at 2019-06-21T11:38:02.885
+Unexpected IOException with stream: 11:38:02.884 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过class name方法查找errormessage元素，已找到
+
+
+# Created at 2019-06-21T11:38:02.962
+Unexpected IOException with stream: 11:38:02.961 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找li0元素，已找到
+
+
+# Created at 2019-06-21T11:38:03.028
+Unexpected IOException with stream: 11:38:03.026 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找shortAccount元素，已找到
+
+
+# Created at 2019-06-21T11:38:03.141
+Unexpected IOException with stream: 11:38:03.140 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找password元素，已找到
+
+
+# Created at 2019-06-21T11:38:03.255
+Unexpected IOException with stream: 11:38:03.254 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找imgcode元素，已找到
+
+
+# Created at 2019-06-21T11:38:03.910
+Unexpected IOException with stream: 11:38:03.909 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过id方法查找code0元素，已找到
+
+
+# Created at 2019-06-21T11:38:03.992
+Unexpected IOException with stream: 11:38:03.990 INFO  com.htyl.utils.WrappedRemoteWebDriver - 通过css selector方法查找input[value='登 录']元素，已找到
+
+

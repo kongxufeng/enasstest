@@ -1,0 +1,1 @@
+{"uuid":"dcd0f19c-c7be-4ee2-8940-36d4ac0c4432","name":"com.enass.utils.BaseTest.initDriver","description":"","start":1562117511313,"stop":1562117515792,"children":["15e9d286-724b-4fa8-b6cc-9f54a8193db0"],"befores":[{"name":"initDriver","status":"passed","stage":"finished","description":"","start":1562117511313,"stop":1562117515792}]}
