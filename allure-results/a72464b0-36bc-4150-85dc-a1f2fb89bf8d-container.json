@@ -1,1 +1,0 @@
-{"uuid":"a72464b0-36bc-4150-85dc-a1f2fb89bf8d","name":"com.enass.utils.BaseTest.quitDriver","description":"","start":1561969441968,"stop":1561969442020,"children":["5e60d8ad-d195-4014-9fc8-fac14195a14a"],"afters":[{"name":"quitDriver","status":"passed","stage":"finished","description":"","start":1561969441969,"stop":1561969442020}]}

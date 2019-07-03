@@ -1,1 +1,0 @@
-{"uuid":"2de8fe2c-5812-4f32-801d-d305acd04934","name":"com.htyl.utils.BaseTest.initDriver","description":"","start":1561714991357,"stop":1561714996012,"children":["d728a5e7-82b4-4fb5-9c79-c980dcd862b6"],"befores":[{"name":"initDriver","status":"passed","stage":"finished","description":"","start":1561714991358,"stop":1561714996012}]}

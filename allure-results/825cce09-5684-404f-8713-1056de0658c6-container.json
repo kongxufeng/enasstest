@@ -1,1 +1,0 @@
-{"uuid":"825cce09-5684-404f-8713-1056de0658c6","name":"评估诊断","start":1561091599411,"stop":1561091966394,"children":["00c25661-1dc7-4dd4-bf10-57ee65da116f"],"afters":[{"name":"closeService","status":"passed","stage":"finished","description":"","start":1561091964955,"stop":1561091966394}]}

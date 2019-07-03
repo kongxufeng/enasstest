@@ -1,1 +1,0 @@
-{"uuid":"a30124a0-2bb9-432a-9648-24a39a2bc5bf","name":"com.htyl.utils.BaseTest.quitDriver","description":"","start":1561714047276,"stop":1561714047321,"children":["689c3176-8c84-453a-8f63-79b7a61f8316"],"afters":[{"name":"quitDriver","status":"passed","stage":"finished","description":"","start":1561714047276,"stop":1561714047321}]}
