@@ -12,9 +12,9 @@ public class ocr {
 
 	public static String ocrtest() {
 		// 原始地址
-		String originalImg = "D:\\ocr\\11.jpg";
+		String originalImg = "D:\\ocr\\1.jpg";
 		// 识别样本输出地址
-		String ocrResult = "D:\\ocr\\22.jpg";
+		String ocrResult = "D:\\ocr\\2.jpg";
 		// 去除噪点
 		ImgUtils.removeBackground(originalImg, ocrResult);
 		// ocr识别
