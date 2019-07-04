@@ -15,8 +15,8 @@ import org.testng.annotations.Test;
 
 public class Start extends BaseTest {
 
-	@Test(dataProvider = "auth", dataProviderClass = UserData.class)
-	public void zhenduan(String username, String password) throws Exception {
+	@Test(dataProvider = "pingguzhenduan", dataProviderClass = UserData.class)
+	public void zhenduan(String username, String password,String flag,String except) throws Exception {
 		//driver.get("http://39.98.238.23/#/serviceHome");// 打开指定的网站
 
 		//登录
@@ -29,10 +29,10 @@ public class Start extends BaseTest {
 		Thread.sleep(1000);
 
 		//判断预期成熟度等级
-		String flag ="3" ;
+		//String flag ="3" ;
 		String a = "nth-child(1)";//选择第一项
 		String b = "last-child";//选择最后一项
-		String c = "贵公司已达到智能化一级成熟度";//预期评估结论
+		//String c = "贵公司已达到智能化一级成熟度";//预期评估结论
 		switch(flag){//成熟度等级
 		case "1"://1级
 			a = "nth-child(1)";
@@ -47,7 +47,7 @@ public class Start extends BaseTest {
 		case "3"://3级
 			a = "last-child";
 			b = "last-child";
-			c ="贵公司已达到智能化三级成熟度，企业核心业务间实现了集成，数据在企业范围内实现共享；基于传感器捕捉大量数据节点，实现工厂的最新数字模型，也就是“数字孪生”，并且以构建数字孪生为核心元素，使用工程知识对采集的数据进行分析并形成认识，挖掘事件发生原因。";
+			//c ="贵公司已达到智能化三级成熟度，企业核心业务间实现了集成，数据在企业范围内实现共享；基于传感器捕捉大量数据节点，实现工厂的最新数字模型，也就是“数字孪生”，并且以构建数字孪生为核心元素，使用工程知识对采集的数据进行分析并形成认识，挖掘事件发生原因。";
 			break;
 		case "4"://4级
 			a = "last-child";
@@ -154,7 +154,7 @@ public class Start extends BaseTest {
 		Thread.sleep(2000);
 		String actual = driver.findElement(By.cssSelector("div.assessR:nth-child(2) > p:nth-child(2)")).getText();
 
-		assertEquals(actual,c);
+		assertEquals(actual,except);
 
 	}
 
