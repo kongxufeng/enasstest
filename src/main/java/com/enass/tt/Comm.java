@@ -32,7 +32,7 @@ public class Comm {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		// 查找id为"test"的元素
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(elem));
+		wait.until(ExpectedConditions.presenceOfElementLocated(elem));
 
 	}
 

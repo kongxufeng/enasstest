@@ -1,13 +1,53 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="评估诊断">
+<suite name="评估诊断测试">
 	<listeners>
 		<listener class-name="com.enass.utils.TestListener" />
 		<listener class-name="com.enass.utils.RetryListener" />
 	</listeners>
-	
-	<test name="开始评估">
+
+	<test name="开始评估测试">
 		<classes>
-			<class name="com.enass.test.assessment.Start" />
+			<class name="com.enass.test.assessment.Start">
+				<methods>
+					<include name="zhenduan" />
+					<include name="save" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="未完成的评估测试">
+		<classes>
+			<class name="com.enass.test.assessment.Unfinished">
+				<methods>
+					<include name="Continue" />
+					<include name="Search" />
+					<include name="Delete" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="已完成的评估测试">
+		<classes>
+			<class name="com.enass.test.assessment.Completed">
+				<methods>
+					<include name="Report" />
+					<include name="Detail" />
+					<include name="Delete" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="本企业的评估测试">
+		<classes>
+			<class name="com.enass.test.assessment.Benqiye">
+				<methods>
+					<include name="Report" />
+					<include name="Detail" />
+				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>

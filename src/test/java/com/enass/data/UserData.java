@@ -17,8 +17,9 @@ public class UserData {
 	public static Object[][] getUserInfo1() {
 		return new Object[][] {
 				// { "600022_system", "yw123456" },
-				// { "600633_system", "yw123456" },
-				{ "4510301_system", "yw123456" }, };
+				{ "600633_system", "yw123456" }
+				//{ "4510301_system", "yw123456" },
+				};
 	}
 
 	@DataProvider(name = "auth2")

@@ -2,9 +2,7 @@ package com.enass.test.assessment;
 
 import static org.testng.Assert.assertEquals;
 import java.util.Random;
-
-import com.enass.page.Assessment;
-import com.enass.page.HomePage;
+import com.enass.page.assessment.Assessment;
 import com.enass.page.UiLeft;
 import com.enass.data.UserData;
 import com.enass.utils.BaseTest;
@@ -12,11 +10,12 @@ import com.enass.utils.Longin;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-
+//开始评估测试
 public class Start extends BaseTest {
 
-	@Test(dataProvider = "pingguzhenduan", dataProviderClass = UserData.class)
-	public void zhenduan(String username, String password,String flag,String except) throws Exception {
+	//提交评估测试
+	@Test(dataProvider = "auth", dataProviderClass = UserData.class)
+	public void zhenduan(String username, String password) throws Exception {
 		//driver.get("http://39.98.238.23/#/serviceHome");// 打开指定的网站
 
 		//登录
@@ -25,14 +24,14 @@ public class Start extends BaseTest {
 
 		//点击评估诊断-开始评估
 		UiLeft uileft = new UiLeft(driver);
-		uileft.click_kspg_link();
+		uileft.click_start_link();
 		Thread.sleep(1000);
 
 		//判断预期成熟度等级
-		//String flag ="3" ;
+		String flag ="3" ;
 		String a = "nth-child(1)";//选择第一项
 		String b = "last-child";//选择最后一项
-		//String c = "贵公司已达到智能化一级成熟度";//预期评估结论
+		String c = "贵公司已达到智能化一级成熟度";//预期评估结论
 		switch(flag){//成熟度等级
 		case "1"://1级
 			a = "nth-child(1)";
@@ -47,7 +46,7 @@ public class Start extends BaseTest {
 		case "3"://3级
 			a = "last-child";
 			b = "last-child";
-			//c ="贵公司已达到智能化三级成熟度，企业核心业务间实现了集成，数据在企业范围内实现共享；基于传感器捕捉大量数据节点，实现工厂的最新数字模型，也就是“数字孪生”，并且以构建数字孪生为核心元素，使用工程知识对采集的数据进行分析并形成认识，挖掘事件发生原因。";
+			c ="贵公司已达到智能化三级成熟度，企业核心业务间实现了集成，数据在企业范围内实现共享；基于传感器捕捉大量数据节点，实现工厂的最新数字模型，也就是“数字孪生”，并且以构建数字孪生为核心元素，使用工程知识对采集的数据进行分析并形成认识，挖掘事件发生原因。";
 			break;
 		case "4"://4级
 			a = "last-child";
@@ -61,8 +60,7 @@ public class Start extends BaseTest {
 		int next1 = rand.nextInt(33)+1;//随机区域
 		int next2 = rand.nextInt(30)+1;//随机行业
 
-		//进行评估
-		//1、企业概况与战略
+		//进行评估-1、企业概况与战略
 		driver.findElement(By.cssSelector("input[placeholder='公司联系电话或邮箱']")).sendKeys("18630435218");//联系方式
 		driver.findElement(By.cssSelector(".el-main > div:nth-child(1) > div:nth-child(5) > ul:nth-child(1) > li:nth-child(1) > div:nth-child(2) > label:nth-child(" + String.valueOf(next1) + ") > span:nth-child(1)")).click();//1.1贵公司属于哪个区域？？
 		driver.findElement(By.cssSelector(".el-main > div:nth-child(1) > div:nth-child(5) > ul:nth-child(1) > li:nth-child(2) > div:nth-child(2) > label:nth-child(" + String.valueOf(next2) + ") > span:nth-child(1)")).click();//1.2贵公司属于何种行业类别？
@@ -75,8 +73,10 @@ public class Start extends BaseTest {
 		driver.findElement(By.cssSelector(".el-main > div:nth-child(1) > div:nth-child(5) > ul:nth-child(1) > li:nth-child(9) > div:nth-child(2) > label:" + b + " > span:nth-child(1)")).click();//1.9公司主营的产品在所属行业中处于何种地位？
 		driver.findElement(By.cssSelector("label.el-checkbox:" + b + " > span:nth-child(1)")).click();//1.10公司在哪些业务环节应用了信息化系统？(可多选)
 		driver.findElement(By.cssSelector(".el-main > div:nth-child(1) > div:nth-child(5) > ul:nth-child(1) > li:nth-child(11) > div:nth-child(2) > label:" + b + " > span:nth-child(1)")).click();//1.11公司平均多久组织员工进行一次培训？
+
+		//点击下一页
 		Assessment next = new Assessment(driver);
-		next.click_next_button();//下一页
+		next.click_next_button();
 		Thread.sleep(500);
 
 		//2、研发设计相关
@@ -154,8 +154,28 @@ public class Start extends BaseTest {
 		Thread.sleep(2000);
 		String actual = driver.findElement(By.cssSelector("div.assessR:nth-child(2) > p:nth-child(2)")).getText();
 
-		assertEquals(actual,except);
+		assertEquals(actual,c);
 
+	}
+
+	//保存评估测试
+	@Test()
+	public void save() throws Exception{
+
+		//点击开始评估
+		UiLeft uileft = new UiLeft(driver);
+		uileft.click_kspg_link();
+		Thread.sleep(1000);
+
+		//1、企业概况与战略
+		driver.findElement(By.cssSelector("input[placeholder='公司联系电话或邮箱']")).sendKeys("18630435218");//联系方式
+
+		//保存
+		Assessment save = new Assessment(driver);
+		save.click_auto_save();
+		Thread.sleep(500);
+		String alert = driver.findElement(By.cssSelector(".el-message__content")).getText();
+		assertEquals(alert,"恭喜你，保存成功");
 	}
 
 }

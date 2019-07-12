@@ -3,9 +3,7 @@ package com.enass.utils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,7 +21,7 @@ public class BaseTest {
 		DriverUtils.stopService();
 	}
 
-	@BeforeMethod()
+	@BeforeClass()
 	// @Parameters({ "username", "password" })
 	public void initDriver() {
 		Config config = new Config("config.properties");
@@ -38,7 +36,7 @@ public class BaseTest {
 	}
 
 
-	@AfterMethod
+	@AfterClass
 	public void quitDriver() {
 		driver.quit();
 	}
