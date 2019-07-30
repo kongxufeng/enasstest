@@ -1,9 +1,12 @@
 package com.enass.page;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * 左侧导航栏
@@ -50,7 +53,7 @@ public class UiLeft {
         /**
          * 学习中心链接
          */
-        @FindBy(css = ".is-opened > ul:nth-child(2) > div:nth-child(3) > li:nth-child(1)")
+        @FindBy(id = "/learnManager")
         private WebElement xxzx_link;
 
         /**
@@ -138,23 +141,32 @@ public class UiLeft {
     /**
      * 操作步骤，点击解决方案链接
      */
-    public void click_jjfa__link() {
+    public void click_jjfa_link() {
+
         jjfa_link.click();
     }
 
     /**
      * 操作步骤，点击学习中心链接
      */
-    public void click_xxzx__link() {
+    public void click_xxzx_link() {
         xxzx_link.click();
     }
 
     /**
      * 操作步骤，点击内容管理-学习中心链接
      */
-    public void click_viode__link() {
+    public void click_viode_link() {
         nrgl_link.click();
         xxzx_link.click();
+    }
+
+    /**
+     * 操作步骤，点击内容管理-解决方案链接
+     */
+    public void click_file_link() {
+        nrgl_link.click();
+        jjfa_link.click();
     }
 
 }

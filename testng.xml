@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="评估诊断测试">
+<suite name="企业上云服务站测试">
 	<listeners>
 		<listener class-name="com.enass.utils.TestListener" />
 		<listener class-name="com.enass.utils.RetryListener" />
@@ -50,4 +50,61 @@
 			</class>
 		</classes>
 	</test>
+
+	<test name="添加视频测试">
+		<classes>
+			<class name="com.enass.test.neirongguanli.AddVideo">
+			</class>
+		</classes>
+	</test>
+
+	<test name="编辑视频测试">
+		<classes>
+			<class name="com.enass.test.neirongguanli.EditVideo">
+			</class>
+		</classes>
+	</test>
+
+	<test name="查询视频测试">
+		<classes>
+			<class name="com.enass.test.neirongguanli.SearchVideo">
+			</class>
+		</classes>
+	</test>
+
+	<test name="删除视频测试">
+		<classes>
+			<class name="com.enass.test.neirongguanli.DeleteVideo">
+			</class>
+		</classes>
+	</test>
+
+	<test name="添加解决方案测试">
+		<classes>
+			<class name="com.enass.test.neirongguanli.AddFile">
+			</class>
+		</classes>
+	</test>
+
+	<test name="编辑解决方案测试">
+		<classes>
+			<class name="com.enass.test.neirongguanli.EditFile">
+			</class>
+		</classes>
+	</test>
+
+	<test name="查询解决方案测试">
+		<classes>
+			<class name="com.enass.test.neirongguanli.SearchFile">
+			</class>
+		</classes>
+	</test>
+
+	<test name="删除解决方案测试">
+		<classes>
+			<class name="com.enass.test.neirongguanli.DeleteFile">
+			</class>
+		</classes>
+	</test>
+
 </suite>

@@ -35,9 +35,9 @@ public class BaseTest {
 		// longin.longin(username, password);
 	}
 
-
 	@AfterClass
 	public void quitDriver() {
 		driver.quit();
 	}
+
 }

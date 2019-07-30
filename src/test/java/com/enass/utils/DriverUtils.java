@@ -32,7 +32,7 @@ public class DriverUtils {
 	 * 静态加载（单例的饿汉模式）service对象，并启动
 	 */
 	static {
-		browser = System.getProperty("htyl.browser", "firefox"); // 获取htyl.browser系统属性，如果未设置，则默认为firefox
+		browser = System.getProperty("htyl.browser", "chrome"); // 获取htyl.browser系统属性，如果未设置，则默认为firefox
 		logger.info("获取系统属性htyl.browser，值为" + browser); // 使用日志记录获取的参数值
 		/*
 		 * 根据browser保存的浏览器类型，分别创建DriverService对象，目前chrome和ie尚未完工
@@ -42,7 +42,7 @@ public class DriverUtils {
 		logger.info("获取配置文件中driver所在路径和文件名，值为"+driverFile); // 使用日志记录获取的参数值
 		if("firefox".equalsIgnoreCase(browser)) {
 			service = new GeckoDriverService.Builder()
-				.usingFirefoxBinary(new FirefoxBinary(new File("C:\\Program Files\\Mozilla Firefox\\firefox.exe"))) // 指定火狐浏览器执行文件
+				.usingFirefoxBinary(new FirefoxBinary(new File("C:/Program Files/Mozilla Firefox/firefox.exe"))) // 指定火狐浏览器执行文件
 				.usingAnyFreePort() // 指定使用任一闲置端口
 				.usingDriverExecutable(new File(driverFile)) // 指定driver驱动程序的位置
 				.build(); // 将Builder对象打造成DriverService对象

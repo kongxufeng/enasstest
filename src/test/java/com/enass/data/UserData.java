@@ -49,4 +49,14 @@ public class UserData {
 		
 	}
 
+	@DataProvider(name = "addvido")
+	public static Object[][] addvido() {
+		return ReadExcel.getDataFromExcel("vido.xlsx", "add");
+	}
+
+	@DataProvider(name = "editvido")
+	public static Object[][] editvido() {
+		return ReadExcel.getDataFromExcel("vido.xlsx", "edit");
+	}
+
 }
