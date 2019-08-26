@@ -1,12 +1,13 @@
 package com.enass.page;
 
+
+import com.enass.tt.Comm;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 /**
  * 左侧导航栏
@@ -59,8 +60,38 @@ public class UiLeft {
         /**
          * 解决方案链接
          */
-        @FindBy(css = ".is-opened > ul:nth-child(2) > div:nth-child(2) > li:nth-child(1)")
+        @FindBy(id = "/solutionManager")
         private WebElement jjfa_link;
+
+    /**
+     * 统计分析
+     */
+    @FindBy(id = "/statisticalAnalysisMenu")
+    private WebElement tongji_link;
+
+    /**
+     * 设备接入数据
+     */
+    @FindBy(id = "/navigationDetail")
+    private WebElement shebei_link;
+
+    /**
+     * 实时统计
+     */
+    @FindBy(id = "/realtimeStatistics")
+    private WebElement shishi_link;
+
+    /**
+     * 整体趋势
+     */
+    @FindBy(id = "/overallTrend")
+    private WebElement zhengti_link;
+
+    /**
+     * 智造课堂
+     */
+    @FindBy(id = "/intellectualClassroom")
+    private WebElement classroom_link;
 
     /**
      * 使用页面工程构造自己
@@ -156,17 +187,69 @@ public class UiLeft {
     /**
      * 操作步骤，点击内容管理-学习中心链接
      */
-    public void click_viode_link() {
-        nrgl_link.click();
-        xxzx_link.click();
+    public void click_viode_link(){
+        if (xxzx_link.isDisplayed()){
+            xxzx_link.click();
+        }else {
+            nrgl_link.click();
+            xxzx_link.click();
+        }
     }
 
     /**
      * 操作步骤，点击内容管理-解决方案链接
      */
     public void click_file_link() {
-        nrgl_link.click();
-        jjfa_link.click();
+        if (jjfa_link.isDisplayed()){
+            jjfa_link.click();
+        }else {
+            nrgl_link.click();
+            jjfa_link.click();
+        }
+    }
+
+    /**
+     * 操作步骤，点击统计分析-设备接入数据连接
+     */
+    public void click_shebei_link() {
+        if (shebei_link.isDisplayed()){
+            shebei_link.click();
+        }else {
+            tongji_link.click();
+            shebei_link.click();
+        }
+
+    }
+
+    /**
+     * 操作步骤，点击统计分析-设备接入数据连接
+     */
+    public void click_shishi_link() {
+        if (shishi_link.isDisplayed()){
+            shishi_link.click();
+        }else {
+            tongji_link.click();
+            shishi_link.click();
+        }
+    }
+
+    /**
+     * 操作步骤，点击统计分析-设备接入数据连接
+     */
+    public void click_zhengti_link() {
+        if (zhengti_link.isDisplayed()){
+            zhengti_link.click();
+        }else {
+            tongji_link.click();
+            zhengti_link.click();
+        }
+    }
+
+    /**
+     * 操作步骤，点击智造课堂链接
+     */
+    public void click_classroom_link() {
+        classroom_link.click();
     }
 
 }

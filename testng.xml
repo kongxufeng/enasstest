@@ -5,106 +5,85 @@
 		<listener class-name="com.enass.utils.RetryListener" />
 	</listeners>
 
-	<test name="开始评估测试">
-		<classes>
-			<class name="com.enass.test.assessment.Start">
-				<methods>
-					<include name="zhenduan" />
-					<include name="save" />
-				</methods>
-			</class>
-		</classes>
-	</test>
+        <test name="开始评估测试" enabled="true">
+            <classes>
+                <class name="com.enass.test.assessment.Start">
+                    <methods>
+                        <include name="zhenduan" />
+                        <include name="save" />
+                    </methods>
+                </class>
+            </classes>
+        </test>
 
-	<test name="未完成的评估测试">
-		<classes>
-			<class name="com.enass.test.assessment.Unfinished">
-				<methods>
-					<include name="Continue" />
-					<include name="Search" />
-					<include name="Delete" />
-				</methods>
-			</class>
-		</classes>
-	</test>
+        <test name="未完成的评估测试" enabled="true">
+            <classes>
+                <class name="com.enass.test.assessment.Unfinished">
+                    <methods>
+                        <include name="Continue" />
+                        <include name="Search" />
+                        <include name="Delete" />
+                    </methods>
+                </class>
+            </classes>
+        </test>
 
-	<test name="已完成的评估测试">
-		<classes>
-			<class name="com.enass.test.assessment.Completed">
-				<methods>
-					<include name="Report" />
-					<include name="Detail" />
-					<include name="Delete" />
-				</methods>
-			</class>
-		</classes>
-	</test>
+        <test name="已完成的评估测试" enabled="true">
+            <classes>
+                <class name="com.enass.test.assessment.Completed">
+                    <methods>
+                        <include name="Report" />
+                        <include name="Detail" />
+                        <include name="Delete" />
+                    </methods>
+                </class>
+            </classes>
+        </test>
 
-	<test name="本企业的评估测试">
-		<classes>
-			<class name="com.enass.test.assessment.Benqiye">
-				<methods>
-					<include name="Report" />
-					<include name="Detail" />
-				</methods>
-			</class>
-		</classes>
-	</test>
+        <test name="本企业的评估测试" enabled="true">
+            <classes>
+                <class name="com.enass.test.assessment.Benqiye">
+                    <methods>
+                        <include name="Report" />
+                        <include name="Detail" />
+                    </methods>
+                </class>
+            </classes>
+        </test>
 
-	<test name="添加视频测试">
-		<classes>
-			<class name="com.enass.test.neirongguanli.AddVideo">
-			</class>
-		</classes>
-	</test>
-
-	<test name="编辑视频测试">
-		<classes>
-			<class name="com.enass.test.neirongguanli.EditVideo">
-			</class>
-		</classes>
-	</test>
-
-	<test name="查询视频测试">
-		<classes>
-			<class name="com.enass.test.neirongguanli.SearchVideo">
-			</class>
-		</classes>
-	</test>
-
-	<test name="删除视频测试">
-		<classes>
-			<class name="com.enass.test.neirongguanli.DeleteVideo">
-			</class>
-		</classes>
-	</test>
-
-	<test name="添加解决方案测试">
-		<classes>
-			<class name="com.enass.test.neirongguanli.AddFile">
-			</class>
-		</classes>
-	</test>
-
-	<test name="编辑解决方案测试">
-		<classes>
-			<class name="com.enass.test.neirongguanli.EditFile">
-			</class>
-		</classes>
-	</test>
-
-	<test name="查询解决方案测试">
-		<classes>
-			<class name="com.enass.test.neirongguanli.SearchFile">
-			</class>
-		</classes>
-	</test>
-
-	<test name="删除解决方案测试">
-		<classes>
-			<class name="com.enass.test.neirongguanli.DeleteFile">
-			</class>
-		</classes>
-	</test>
-
-</suite>
+    <test name="解决方案测试" enabled="true">
+        <classes>
+            <class name="com.enass.test.neirongguanli.SolutionManager">
+                <methods>
+                    <include name="add" />
+                    <include name="edit" />
+                    <include name="delete" />
+                    <include name="search" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="学习中心测试" enabled="true">
+        <classes>
+            <class name="com.enass.test.neirongguanli.learnManager">
+                <methods>
+                    <include name="add" />
+                    <include name="edit" />
+                    <include name="delete" />
+                    <include name="search" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="统计分析测试" enabled="true">
+        <classes>
+            <class name="com.enass.test.analysis.StatisticalAnalysis">
+                <methods>
+                    <include name="checkEquipment" />
+                    <include name="checkshishi" />
+                    <include name="checkzhengti" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    </suite>

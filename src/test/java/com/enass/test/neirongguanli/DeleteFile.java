@@ -6,6 +6,8 @@ import com.enass.page.neirongguanli.PageFile;
 import com.enass.utils.BaseTest;
 import com.enass.utils.Longin;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -13,20 +15,26 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
 
-public class DeleteFile extends BaseTest {
+public class DeleteFile {
+    WebDriver driver;
+
+    public DeleteFile(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
+    }
 
     //删除解决方案测试
-    @Test(dataProvider = "auth", dataProviderClass = UserData.class)
-    public void deletefile(String username, String password) throws Exception{
+    //@Test(dataProvider = "auth", dataProviderClass = UserData.class)
+    public void deletefile() throws Exception{
 
         //登录
-        Longin Longin = new Longin(driver);
-        Longin.longin(username, password);
+       // Longin Longin = new Longin(driver);
+        //longin(username, password);
 
         //点击内容管理-解决方案管理
         UiLeft uileft = new UiLeft(driver);
         uileft.click_file_link();
-        Thread.sleep(1000);
+
 
         //获取预期标题
         Thread.sleep(1000);
@@ -49,6 +57,7 @@ public class DeleteFile extends BaseTest {
         Thread.sleep(1000);
         String biaoti = get.get_biaoti();
         assertNotEquals(biaoti,except);
+        Thread.sleep(1000);
 
     }
 

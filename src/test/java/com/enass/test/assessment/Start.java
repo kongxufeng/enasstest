@@ -16,12 +16,11 @@ public class Start extends BaseTest {
 	//提交评估测试
 	@Test(dataProvider = "auth", dataProviderClass = UserData.class)
 	public void zhenduan(String username, String password) throws Exception {
-		//driver.get("http://39.98.238.23/#/serviceHome");// 打开指定的网站
 
 		//登录
 		Longin Longin = new Longin(driver);
 		Longin.longin(username, password);
-
+		Thread.sleep(1000);
 		//点击评估诊断-开始评估
 		UiLeft uileft = new UiLeft(driver);
 		uileft.click_start_link();
@@ -155,6 +154,7 @@ public class Start extends BaseTest {
 		String actual = driver.findElement(By.cssSelector("div.assessR:nth-child(2) > p:nth-child(2)")).getText();
 
 		assertEquals(actual,c);
+		Thread.sleep(1000);
 
 	}
 
@@ -163,6 +163,7 @@ public class Start extends BaseTest {
 	public void save() throws Exception{
 
 		//点击开始评估
+
 		UiLeft uileft = new UiLeft(driver);
 		uileft.click_kspg_link();
 		Thread.sleep(1000);

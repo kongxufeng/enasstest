@@ -25,6 +25,7 @@ public class Completed extends BaseTest {
         Longin.longin(username, password);
 
         //点击评估诊断-已完成的评估
+        Thread.sleep(2000);
         UiLeft uileft = new UiLeft(driver);
         uileft.click_Completed_link();
         Thread.sleep(2000);

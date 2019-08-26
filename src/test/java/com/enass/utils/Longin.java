@@ -26,15 +26,23 @@ public class Longin {
         logger.info("url = **********" + Constants.BasicURL );
 
         //等待工作站元素出现
-        //Comm.wait_z(driver, By.cssSelector("li.el-menu-item:nth-child(5)"));
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        Comm.wait_z(driver, By.cssSelector("#app > div > div.pageHead > div > div.page_footer > div > div:nth-child(5)"));
+        //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         //点击工作站
         HomePage homepage = new HomePage(driver);
         homepage.click_gzz_link();
+
         // 2、登录
         LoginPage1 LoginPage1 = new LoginPage1(driver);
         LoginPage1.login(username, password);
+        //等待进入工作站，如果没进入，再次点击工作站
+
+        try{
+            Comm.wait_z(driver,By.cssSelector("#\\/enterprise\\.2 > li:nth-child(1) > span:nth-child(2)"));
+        }catch (Exception e){
+            homepage.click_gzz_link();
+        }
     }
 
     public void loginFaileAss() {

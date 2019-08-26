@@ -13,7 +13,7 @@ public class Complete {
     /**
      * 查看报告按钮
      */
-    @FindBy(xpath = "/html/body/div[1]/div/section/section/main/div/div/div[1]/div[3]/table/tbody/tr[1]/td[7]/div/button[1]")
+    @FindBy(css = "tr.el-table__row:nth-child(1) > td:nth-child(7) > div:nth-child(1) > button:nth-child(1)")
     private WebElement report_btn;
 
     /**

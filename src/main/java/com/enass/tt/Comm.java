@@ -30,11 +30,12 @@ public class Comm {
 	// 显示等待
 	public static void wait_z(WebDriver driver, By elem) {
 
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(driver, 20);
 		// 查找id为"test"的元素
 		wait.until(ExpectedConditions.presenceOfElementLocated(elem));
 
 	}
+
 
 	// 新建窗口
 	public static void newwindow(WebDriver driver, String url) {

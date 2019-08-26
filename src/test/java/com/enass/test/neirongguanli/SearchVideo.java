@@ -6,20 +6,29 @@ import com.enass.page.neirongguanli.PageVido;
 import com.enass.utils.BaseTest;
 import com.enass.utils.Longin;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
 
-public class SearchVideo extends BaseTest {
+public class SearchVideo {
+
+    WebDriver driver;
+
+    public SearchVideo(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
+    }
 
     //查询视频测试
-    @Test(dataProvider = "auth", dataProviderClass = UserData.class)
-    public void searchviode(String username, String password) throws Exception{
+    //@Test()
+    public void searchviode() throws Exception{
 
         //登录
-        Longin Longin = new Longin(driver);
-        Longin.longin(username, password);
+        //Longin Longin = new Longin(driver);
+        //Longin.longin(username, password);
 
         //点击内容管理-学习中心管理
         UiLeft uileft = new UiLeft(driver);
@@ -33,11 +42,9 @@ public class SearchVideo extends BaseTest {
         //输入获取的预期标题并点击搜索
         get.searchinfo(except);
 
-        //断言搜索结果显示的标题与搜索的预期标题是否不一致
-        Thread.sleep(1000);
+        //断言搜索结果显示的标题与搜索的预期标题是否一致
         String act = get.get_biaoti();
-        assertNotEquals(act,except);
-
+        assertEquals(act,except);
+        Thread.sleep(1000);
     }
-
 }

@@ -14,7 +14,7 @@ public class HomePage {
     /**
      * 工作站链接
      */
-    @FindBy(css = "li.el-menu-item:nth-child(5)")
+    @FindBy(css = "#app > div > div.pageHead > div > div.page_footer > div > div:nth-child(5)")
     private WebElement gzz_link;
 
     /**

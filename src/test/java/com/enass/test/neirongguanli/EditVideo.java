@@ -6,19 +6,28 @@ import com.enass.page.neirongguanli.PageVido;
 import com.enass.utils.BaseTest;
 import com.enass.utils.Longin;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
 
-public class EditVideo extends BaseTest {
+public class EditVideo {
+
+    WebDriver driver;
+
+    public EditVideo(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
+    }
 
     //编辑视频测试
-    @Test(dataProvider = "editvido", dataProviderClass = UserData.class)
-    public void editviode(String username, String password,String biaoti ,String url ,String yunbi ,String shuoming) throws Exception{
+    //@Test(dataProvider = "editvido", dataProviderClass = UserData.class)
+    public void editviode(String biaoti ,String url ,String yunbi ,String shuoming) throws Exception{
         //登录
-        Longin Longin = new Longin(driver);
-        Longin.longin(username, password);
+        //Longin Longin = new Longin(driver);
+        //Longin.longin(username, password);
 
         //点击内容管理-学习中心管理
         UiLeft uileft = new UiLeft(driver);
@@ -33,7 +42,7 @@ public class EditVideo extends BaseTest {
         Thread.sleep(1000);
         String act = driver.findElement(By.cssSelector("tr.el-table__row:nth-child(1) > td:nth-child(3) > div:nth-child(1)")).getText();
         assertEquals(act,except);
-
+        Thread.sleep(2000);
     }
 
 }

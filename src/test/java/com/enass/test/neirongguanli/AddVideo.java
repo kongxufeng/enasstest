@@ -7,18 +7,27 @@ import com.enass.utils.BaseTest;
 import com.enass.utils.Longin;
 import org.openqa.selenium.By;
 
-import org.testng.annotations.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
 import static org.testng.Assert.assertEquals;
 
-public class AddVideo extends BaseTest {
+public class AddVideo{
+
+    WebDriver driver;
+
+    public AddVideo(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
+    }
 
     //添加视频测试
-    @Test(dataProvider = "addvido", dataProviderClass = UserData.class)
-    public void addviode(String username, String password ,String biaoti ,String url ,String yunbi ,String shuoming) throws Exception{
+    //@Test(dataProvider = "addvido", dataProviderClass = UserData.class)
+    public void addviode(String biaoti ,String url ,String yunbi ,String shuoming) throws Exception{
 
         //登录
-        Longin Longin = new Longin(driver);
-        Longin.longin(username, password);
+        //Longin Longin = new Longin(driver);
+        //Longin.longin(username, password);
 
         //点击内容管理-学习中心管理
         UiLeft uileft = new UiLeft(driver);
@@ -33,6 +42,7 @@ public class AddVideo extends BaseTest {
         Thread.sleep(1000);
         String act = driver.findElement(By.cssSelector("tr.el-table__row:nth-child(1) > td:nth-child(3) > div:nth-child(1)")).getText();
         assertEquals(act,expect);
+        Thread.sleep(1000);
     }
 
 }
